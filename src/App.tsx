@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import photo from './photo.jpg';
 import meme from './meme.jpg';
+import gathr from './gathr.jpeg';
+import coverLetter from './coverletter.png';
 
 interface CartItem {
   name: string;
@@ -44,7 +46,7 @@ const App: React.FC = () => {
   const services: Service[] = [
     {
       icon: '⚛️',
-      title: 'Frontend Development',
+      title: 'Front-End Development',
       rating: '⭐⭐⭐⭐⭐',
       reviews: 150,
       description: 'React.js, Next.js, TypeScript, Redux Toolkit, TanStack Query. Building scalable web applications with modern frameworks.',
@@ -102,17 +104,17 @@ const App: React.FC = () => {
 
   const projects: Project[] = [
     {
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
+      image: gathr,
       title: 'Gathr - Social Events Platform',
       rating: '⭐⭐⭐⭐⭐',
       description: 'Designed and developed a full-stack social events platform using React, Node.js, and MongoDB, enabling users to create and join local events. Integrated real-time chat and notifications for enhanced user engagement.',
       link: 'https://socialgame-d2zq.onrender.com/'
     },
     {
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      image: coverLetter,
       title: 'AI powered Cover Letter Generator',
       rating: '⭐⭐⭐⭐⭐',
-      description: 'Built an AI-powered cover letter generator using React for the frontend and Node.js with OpenAI API for the backend. Users can input their resume and job description to receive a tailored cover letter in seconds.',
+      description: 'Built an AI-powered cover letter generator using React and Node.js with OpenAI integration. Users input their resume and job description to generate tailored letters in seconds, with the ability to choose between different GPT models based on speed, cost, and quality.',
       link: 'https://coverletterusingai-frontend.onrender.com/'
     },
   ];
@@ -129,7 +131,7 @@ const App: React.FC = () => {
         'Integrated Zii, Deputy, and MYOB systems for accelerated decision-making and operational visibility',
         'Automated build and deployment workflows with Jenkins CI pipelines, reducing release errors by 40%',
       ],
-      funNote: 'Fun fact: I once reduced application error logs from 200KB to under 30KB. My teammates called me the "Log Whisperer" 🪵'
+      funNote: 'Fun fact: I once reduced application error logs from 200KB to under 30KB. My teammates called me the "Log Nerd" 🪵'
     },
     {
       title: 'Software Engineer',
@@ -152,7 +154,7 @@ const App: React.FC = () => {
       rating: '⭐⭐⭐⭐☆',
       responsibilities: [
         'Architected MuleSoft integrations to improve cross-system connectivity at scale',
-        'Led transition from legacy ASP.NET frontend to modern React.js framework',
+        'Led transition from legacy ASP.NET front-end to modern React.js framework',
         'Added comprehensive unit tests to improve code reliability and coverage',
         'Encouraged team adoption of testing best practices',
       ],
@@ -202,8 +204,7 @@ const App: React.FC = () => {
     <div className="App">
       {/* Top Banner */}
       <div className="top-banner">
-        🎉 Special Offer: Hire Me Today & Get FREE Code Reviews for Life! 4+ Years of Experience! 🎉
-      </div>
+        🎉 Special Offer: Hire Me Today & Get FREE Code Reviews for Life!</div>
 
       {/* Header */}
       <header className="header">
@@ -297,13 +298,13 @@ const App: React.FC = () => {
               building and maintaining scalable web applications with React, TypeScript, and C#.
             </p>
             <p>
-              I specialize in refactoring legacy systems and increasing reliability. My track record includes
-              reducing application error logs from 200KB to under 30KB and cutting defect rates by ~30%
-              through modern coding standards.
+              Results-driven developer experienced in shipping reliable features in fast-paced environments.
+              Strong understanding of software design principles, code reviews, and testing practices, with a consistent track record of delivering
+              high-quality solutions on time.
             </p>
             <div className="funny-note">
               😄 <strong>Fun Fact:</strong> I once reduced error logs from 200KB to 30KB. My team now
-              calls me the "Log Whisperer" 🪵. I prefer to think of myself as a "Bug Terminator" though.
+              calls me the "Log Nerd" 🪵. I prefer to think of myself as a "Bug Terminator" though.
             </div>
             <p>
               I'm passionate about mentorship and have helped accelerate two junior engineers' growth,
@@ -312,12 +313,13 @@ const App: React.FC = () => {
             </p>
             <div className="funny-note">
               💡 <strong>Developer Wisdom:</strong> "It works on my machine" is not a deployment strategy.
-              Neither is "just restart the server." Trust me, I learned this during my grad dev days!
+              Neither is "just restart the server." Trust me, I learned this the hard way during my grad dev days!
             </div>
             <p>
               <strong>Certifications:</strong><br />
               🏆 AWS Certified Cloud Practitioner (Valid: Nov 2025 – Nov 2027)<br />
-              🏆 MuleSoft Certified Integration Developer – Level 1 (Valid: Nov 2025 – Nov 2027)
+              🏆 MuleSoft Certified Integration Developer – Level 1 (Valid: Nov 2025 – Nov 2027)<br />
+              🏆 Docker Foundations Professional Certificate
             </p>
           </div>
         </div>
@@ -399,10 +401,10 @@ const App: React.FC = () => {
               <div style={{ position: 'relative' }}>
                 <img src={project.image} alt={project.title} className="portfolio-image" />
                 <div className="portfolio-overlay">
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="view-details"
                   >
                     View Live Project →
@@ -413,10 +415,10 @@ const App: React.FC = () => {
                 <div className="product-title">{project.title}</div>
                 <div className="product-rating">{project.rating}</div>
                 <div className="product-description">{project.description}</div>
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="add-to-cart"
                   style={{ textDecoration: 'none', display: 'block', textAlign: 'center' }}
                 >
@@ -470,7 +472,7 @@ const App: React.FC = () => {
           <h3>🔧 Complete Tech Stack</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px', marginTop: '15px' }}>
             <div>
-              <strong>Frontend:</strong> TypeScript, JavaScript, React.js, Next.js, Redux Toolkit, TanStack Query, React Native
+              <strong>Front-End:</strong> TypeScript, JavaScript, React.js, Next.js, Redux Toolkit, TanStack Query, React Native
             </div>
             <div>
               <strong>Styling:</strong> Tailwind CSS, Bootstrap 5, Storybook, Figma-to-Code
@@ -546,10 +548,6 @@ const App: React.FC = () => {
               🚀 Send Message
             </button>
           </form>
-          <div className="funny-note" style={{ marginTop: '20px' }}>
-            💡 <strong>Pro Tip:</strong> I respond faster to emails about interesting technical challenges
-            than I do to "Can you fix my printer?" requests. Though I've been known to troubleshoot those too! 🖨️
-          </div>
         </div>
       </section>
 
@@ -562,12 +560,9 @@ const App: React.FC = () => {
           <a href="#portfolio">Portfolio</a>
           <a href="#contact">Contact</a>
         </div>
-        <p>&copy; 2024 Aditya Venkataraman Iyer - Software Engineer. All rights reserved.</p>
+        <p>&copy; 2026 Aditya Venkataraman Iyer - Software Engineer. All rights reserved.</p>
         <p style={{ marginTop: '10px', fontSize: '0.9rem', opacity: 0.8 }}>
           Built with ❤️, TypeScript, and probably too much coffee ☕
-        </p>
-        <p style={{ marginTop: '5px', fontSize: '0.85rem', opacity: 0.7 }}>
-          AWS Certified | MuleSoft Certified | 4+ Years Experience
         </p>
       </footer>
     </div>
